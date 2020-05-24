@@ -255,7 +255,7 @@ Deuda<-Deuda %>% mutate(Interes=Saldo*0.095*5/12)
   
 # Tasas (Valor futuro)
 
-TRI<-data.frame(PLazo=c(0.25,1,3,6,9,12,26,36,60),Tasa=c(0.0125,0.0265,0.0327,0.0411,0.0476,0.0603,0.0782,0.0803,0.0866))
+TRI<-data.frame(PLazo=c(0.25,1,3,6,9,12,26,36,60),Tasa=c(0.0022,0.0074,0.0133,0.0257,0.0312,0.0379,0.0531,0.0530,0.0387))
 Flujo_Final<-Deuda %>% select(Num_Mes,Interes)
 Gasto_Fijo<-Gasto_Fijo<-c(sum(Gasto_Fijo[1:5]),sum(Gasto_Fijo[6:10]),sum(Gasto_Fijo[11:14]),rep(0,9))
 Gasto_Aleatorio<-c(Gasto_Aleatorios,rep(0,3))
