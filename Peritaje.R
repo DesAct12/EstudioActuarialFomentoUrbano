@@ -239,7 +239,7 @@ Flujo_Gasto<-Flujo_Gasto %>% mutate(Gastos_Deuda=`Sistema Pluvial`+`Sistema Sani
 Deuda<-as.data.frame(1:11)
 colnames(Deuda)<-"Num_Mes"
 Deuda <- Deuda %>% mutate(Desembolso=c(sum(Flujo_Gasto$Gastos_Deuda[1:5],500000),sum(Flujo_Gasto$Gastos_Deuda[6:10]),sum(Flujo_Gasto$Gastos_Deuda[11:14]),rep(0,8))) %>%
-  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=Ingreso_Ventas) 
+  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=c(0,0,Ingresos$Ingreso_Total)) 
 
 Saldo<-NULL
 Saldo[1]<-Deuda$Desembolso[1]
@@ -317,7 +317,7 @@ Flujo_Gasto<-Flujo_Gasto %>% mutate(Gastos_Deuda=`Sistema Pluvial`+`Sistema Sani
 Deuda<-as.data.frame(1:12)
 colnames(Deuda)<-"Num_Mes"
 Deuda <- Deuda %>% mutate(Desembolso=c(sum(Flujo_Gasto$Gastos_Deuda[1:5],500000),sum(Flujo_Gasto$Gastos_Deuda[6:10]),sum(Flujo_Gasto$Gastos_Deuda[11:14]),rep(0,9))) %>%
-  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=Ingreso_Ventas) 
+  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=c(0,0,Ingresos$Ingreso_Total)) 
 
 Saldo<-NULL
 Saldo[1]<-Deuda$Desembolso[1]
@@ -394,7 +394,7 @@ Flujo_Gasto<-Flujo_Gasto %>% mutate(Gastos_Deuda=`Sistema Pluvial`+`Sistema Sani
 Deuda<-as.data.frame(1:13)
 colnames(Deuda)<-"Num_Mes"
 Deuda <- Deuda %>% mutate(Desembolso=c(sum(Flujo_Gasto$Gastos_Deuda[1:5],500000),sum(Flujo_Gasto$Gastos_Deuda[6:10]),sum(Flujo_Gasto$Gastos_Deuda[11:14]),rep(0,10))) %>%
-  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=Ingreso_Ventas) 
+  mutate(Desembolso=Desembolso+Gasto_Construccion, Ventas=c(0,0,Ingresos$Ingreso_Total)) 
 
 Saldo<-NULL
 Saldo[1]<-Deuda$Desembolso[1]
